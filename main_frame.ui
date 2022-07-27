@@ -9,12 +9,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1110</width>
-    <height>756</height>
+    <width>1200</width>
+    <height>760</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -712,7 +712,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 </string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="diagnosisPages">
              <property name="styleSheet">
@@ -3900,8 +3900,8 @@ border-radius: 10px;
                                                <rect>
                                                 <x>0</x>
                                                 <y>0</y>
-                                                <width>110</width>
-                                                <height>352</height>
+                                                <width>177</width>
+                                                <height>235</height>
                                                </rect>
                                               </property>
                                               <layout class="QVBoxLayout" name="verticalLayout_44">
@@ -4370,8 +4370,8 @@ border-radius: 10px;
                                                <rect>
                                                 <x>0</x>
                                                 <y>0</y>
-                                                <width>100</width>
-                                                <height>30</height>
+                                                <width>191</width>
+                                                <height>96</height>
                                                </rect>
                                               </property>
                                              </widget>
@@ -4850,8 +4850,8 @@ border-radius: 15px;</string>
                                <rect>
                                 <x>0</x>
                                 <y>0</y>
-                                <width>566</width>
-                                <height>527</height>
+                                <width>1022</width>
+                                <height>612</height>
                                </rect>
                               </property>
                               <property name="styleSheet">
@@ -5025,8 +5025,8 @@ border-radius: 5px
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>116</width>
-                                       <height>1174</height>
+                                       <width>948</width>
+                                       <height>634</height>
                                       </rect>
                                      </property>
                                      <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -6748,7 +6748,7 @@ border-radius: 15px;</string>
                                <rect>
                                 <x>0</x>
                                 <y>0</y>
-                                <width>520</width>
+                                <width>1008</width>
                                 <height>1076</height>
                                </rect>
                               </property>
@@ -8810,7 +8810,7 @@ border-radius: 15px;</string>
                                <rect>
                                 <x>0</x>
                                 <y>0</y>
-                                <width>520</width>
+                                <width>1008</width>
                                 <height>796</height>
                                </rect>
                               </property>
@@ -13642,7 +13642,7 @@ QHeaderView::section:vertical
                                        <bool>false</bool>
                                       </property>
                                       <attribute name="horizontalHeaderVisible">
-                                       <bool>false</bool>
+                                       <bool>true</bool>
                                       </attribute>
                                       <attribute name="horizontalHeaderCascadingSectionResizes">
                                        <bool>true</bool>
@@ -13904,6 +13904,39 @@ QHeaderView::section:vertical
                                         <string>Paracetamol, Clonazepam, Ribofla...</string>
                                        </property>
                                       </item>
+                                     </widget>
+                                    </item>
+                                    <item alignment="Qt::AlignRight">
+                                     <widget class="QFrame" name="printConsultationBtnContainer">
+                                      <property name="frameShape">
+                                       <enum>QFrame::StyledPanel</enum>
+                                      </property>
+                                      <property name="frameShadow">
+                                       <enum>QFrame::Raised</enum>
+                                      </property>
+                                      <layout class="QHBoxLayout" name="horizontalLayout_8">
+                                       <item alignment="Qt::AlignLeft">
+                                        <widget class="QPushButton" name="printConsultationBtn">
+                                         <property name="font">
+                                          <font>
+                                           <family>Open Sans</family>
+                                           <pointsize>14</pointsize>
+                                           <weight>75</weight>
+                                           <bold>true</bold>
+                                          </font>
+                                         </property>
+                                         <property name="styleSheet">
+                                          <string notr="true">background-color:rgb(56, 166, 255);
+padding: 3px 23px 3px 23px;
+border-radius: 15px;
+color: #fff;</string>
+                                         </property>
+                                         <property name="text">
+                                          <string>Next</string>
+                                         </property>
+                                        </widget>
+                                       </item>
+                                      </layout>
                                      </widget>
                                     </item>
                                    </layout>
@@ -14486,22 +14519,55 @@ background-color: rgb(88, 169, 235);
                              <layout class="QVBoxLayout" name="verticalLayout_290">
                               <item>
                                <widget class="QWidget" name="sumMainContainer" native="true">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
                                 <property name="styleSheet">
                                  <string notr="true">#sumMainTotalDiagnosisContainer, #sumMainTotalPatientsContainer {border: 1px solid gray;}
 #sumMainTotalDiagnosisContainer, #sumMainTotalPatientsContainer{border-radius: 10px;}</string>
                                 </property>
                                 <layout class="QVBoxLayout" name="verticalLayout_291">
-                                 <item>
+                                 <item alignment="Qt::AlignVCenter">
                                   <widget class="QFrame" name="sumMainTopContainer">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
                                    <property name="frameShape">
                                     <enum>QFrame::StyledPanel</enum>
                                    </property>
                                    <property name="frameShadow">
                                     <enum>QFrame::Raised</enum>
                                    </property>
-                                   <layout class="QHBoxLayout" name="horizontalLayout_83">
+                                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
                                     <item alignment="Qt::AlignTop">
                                      <widget class="QFrame" name="sumMainLabelContainer">
+                                      <property name="sizePolicy">
+                                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                       </sizepolicy>
+                                      </property>
                                       <property name="styleSheet">
                                        <string notr="true">color: rgb(0, 0, 0);</string>
                                       </property>
@@ -14512,7 +14578,7 @@ background-color: rgb(88, 169, 235);
                                        <enum>QFrame::Raised</enum>
                                       </property>
                                       <layout class="QVBoxLayout" name="verticalLayout_292">
-                                       <item>
+                                       <item alignment="Qt::AlignTop">
                                         <widget class="QLabel" name="sumMainLabel1">
                                          <property name="font">
                                           <font>
@@ -14525,12 +14591,12 @@ background-color: rgb(88, 169, 235);
                                          </property>
                                         </widget>
                                        </item>
-                                       <item>
+                                       <item alignment="Qt::AlignTop">
                                         <widget class="QLabel" name="sumMainLabel2">
                                          <property name="font">
                                           <font>
                                            <family>Raleway SemiBold</family>
-                                           <pointsize>20</pointsize>
+                                           <pointsize>18</pointsize>
                                           </font>
                                          </property>
                                          <property name="text">
@@ -14541,7 +14607,7 @@ background-color: rgb(88, 169, 235);
                                       </layout>
                                      </widget>
                                     </item>
-                                    <item alignment="Qt::AlignHCenter">
+                                    <item>
                                      <widget class="QFrame" name="sumMainGraph1Container">
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -14550,20 +14616,64 @@ background-color: rgb(88, 169, 235);
                                        <enum>QFrame::Raised</enum>
                                       </property>
                                       <layout class="QVBoxLayout" name="verticalLayout_293">
-                                       <item alignment="Qt::AlignHCenter">
-                                        <widget class="QLabel" name="sumMainGraph1">
-                                         <property name="text">
-                                          <string/>
+                                       <property name="spacing">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item>
+                                        <widget class="QFrame" name="sumMainGraph1">
+                                         <property name="sizePolicy">
+                                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                           <horstretch>0</horstretch>
+                                           <verstretch>0</verstretch>
+                                          </sizepolicy>
                                          </property>
-                                         <property name="pixmap">
-                                          <pixmap resource="resources.qrc">:/progressBarImages/images/graph1.png</pixmap>
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>180</height>
+                                          </size>
                                          </property>
+                                         <property name="frameShape">
+                                          <enum>QFrame::StyledPanel</enum>
+                                         </property>
+                                         <property name="frameShadow">
+                                          <enum>QFrame::Raised</enum>
+                                         </property>
+                                         <layout class="QGridLayout" name="gridLayout_2">
+                                          <property name="leftMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="topMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="rightMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="spacing">
+                                           <number>0</number>
+                                          </property>
+                                         </layout>
                                         </widget>
                                        </item>
                                       </layout>
                                      </widget>
                                     </item>
-                                    <item alignment="Qt::AlignHCenter">
+                                    <item>
                                      <widget class="QFrame" name="sumMainGraph3Container">
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -14571,21 +14681,65 @@ background-color: rgb(88, 169, 235);
                                       <property name="frameShadow">
                                        <enum>QFrame::Raised</enum>
                                       </property>
-                                      <layout class="QVBoxLayout" name="verticalLayout_294">
-                                       <item alignment="Qt::AlignHCenter">
-                                        <widget class="QLabel" name="sumMainGraph3">
-                                         <property name="text">
-                                          <string/>
+                                      <layout class="QVBoxLayout" name="verticalLayout_3">
+                                       <property name="spacing">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item>
+                                        <widget class="QFrame" name="sumMainGraph3">
+                                         <property name="sizePolicy">
+                                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                           <horstretch>0</horstretch>
+                                           <verstretch>0</verstretch>
+                                          </sizepolicy>
                                          </property>
-                                         <property name="pixmap">
-                                          <pixmap resource="resources.qrc">:/progressBarImages/images/graph2.png</pixmap>
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>180</height>
+                                          </size>
                                          </property>
+                                         <property name="frameShape">
+                                          <enum>QFrame::StyledPanel</enum>
+                                         </property>
+                                         <property name="frameShadow">
+                                          <enum>QFrame::Raised</enum>
+                                         </property>
+                                         <layout class="QGridLayout" name="gridLayout_3">
+                                          <property name="leftMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="topMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="rightMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="spacing">
+                                           <number>0</number>
+                                          </property>
+                                         </layout>
                                         </widget>
                                        </item>
                                       </layout>
                                      </widget>
                                     </item>
-                                    <item alignment="Qt::AlignHCenter">
+                                    <item>
                                      <widget class="QFrame" name="sumMainGraph2Container">
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
@@ -14593,15 +14747,65 @@ background-color: rgb(88, 169, 235);
                                       <property name="frameShadow">
                                        <enum>QFrame::Raised</enum>
                                       </property>
-                                      <layout class="QVBoxLayout" name="verticalLayout_295">
-                                       <item alignment="Qt::AlignHCenter">
-                                        <widget class="QLabel" name="sumMainGraph2">
-                                         <property name="text">
-                                          <string/>
+                                      <layout class="QVBoxLayout" name="verticalLayout_4">
+                                       <property name="spacing">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item>
+                                        <widget class="QFrame" name="sumMainGraph2">
+                                         <property name="sizePolicy">
+                                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                           <horstretch>0</horstretch>
+                                           <verstretch>0</verstretch>
+                                          </sizepolicy>
                                          </property>
-                                         <property name="pixmap">
-                                          <pixmap resource="resources.qrc">:/progressBarImages/images/graph3.png</pixmap>
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>0</width>
+                                           <height>180</height>
+                                          </size>
                                          </property>
+                                         <property name="maximumSize">
+                                          <size>
+                                           <width>16777212</width>
+                                           <height>16777215</height>
+                                          </size>
+                                         </property>
+                                         <property name="frameShape">
+                                          <enum>QFrame::StyledPanel</enum>
+                                         </property>
+                                         <property name="frameShadow">
+                                          <enum>QFrame::Raised</enum>
+                                         </property>
+                                         <layout class="QGridLayout" name="gridLayout_4">
+                                          <property name="leftMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="topMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="rightMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="spacing">
+                                           <number>0</number>
+                                          </property>
+                                         </layout>
                                         </widget>
                                        </item>
                                       </layout>
@@ -14612,6 +14816,12 @@ background-color: rgb(88, 169, 235);
                                  </item>
                                  <item>
                                   <widget class="QFrame" name="sumMainTotalContainer">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
                                    <property name="frameShape">
                                     <enum>QFrame::StyledPanel</enum>
                                    </property>
@@ -14707,6 +14917,12 @@ background-color: rgb(88, 169, 235);
                                  </item>
                                  <item>
                                   <widget class="QFrame" name="sumMainBottomContainer">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
                                    <property name="frameShape">
                                     <enum>QFrame::StyledPanel</enum>
                                    </property>
@@ -14714,6 +14930,21 @@ background-color: rgb(88, 169, 235);
                                     <enum>QFrame::Raised</enum>
                                    </property>
                                    <layout class="QHBoxLayout" name="horizontalLayout_87">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
                                     <item>
                                      <widget class="QFrame" name="sumMainTableWidgetContainer">
                                       <property name="frameShape">
@@ -14723,8 +14954,17 @@ background-color: rgb(88, 169, 235);
                                        <enum>QFrame::Raised</enum>
                                       </property>
                                       <layout class="QVBoxLayout" name="verticalLayout_296">
+                                       <property name="spacing">
+                                        <number>0</number>
+                                       </property>
+                                       <property name="leftMargin">
+                                        <number>0</number>
+                                       </property>
                                        <property name="topMargin">
                                         <number>30</number>
+                                       </property>
+                                       <property name="rightMargin">
+                                        <number>0</number>
                                        </property>
                                        <property name="bottomMargin">
                                         <number>30</number>
@@ -15110,21 +15350,84 @@ QHeaderView::section:vertical
                                       </layout>
                                      </widget>
                                     </item>
-                                    <item alignment="Qt::AlignHCenter">
+                                    <item>
                                      <widget class="QFrame" name="sumMainGraph4Container">
+                                      <property name="sizePolicy">
+                                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                       </sizepolicy>
+                                      </property>
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>0</width>
+                                        <height>0</height>
+                                       </size>
+                                      </property>
                                       <property name="frameShape">
                                        <enum>QFrame::StyledPanel</enum>
                                       </property>
                                       <property name="frameShadow">
                                        <enum>QFrame::Raised</enum>
                                       </property>
-                                      <layout class="QVBoxLayout" name="verticalLayout_297">
+                                      <layout class="QVBoxLayout" name="verticalLayout">
+                                       <property name="spacing">
+                                        <number>0</number>
+                                       </property>
                                        <property name="leftMargin">
-                                        <number>50</number>
+                                        <number>0</number>
+                                       </property>
+                                       <property name="topMargin">
+                                        <number>0</number>
                                        </property>
                                        <property name="rightMargin">
-                                        <number>50</number>
+                                        <number>0</number>
                                        </property>
+                                       <property name="bottomMargin">
+                                        <number>0</number>
+                                       </property>
+                                       <item>
+                                        <widget class="QFrame" name="demographicGraph_2">
+                                         <property name="sizePolicy">
+                                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                           <horstretch>0</horstretch>
+                                           <verstretch>0</verstretch>
+                                          </sizepolicy>
+                                         </property>
+                                         <property name="minimumSize">
+                                          <size>
+                                           <width>350</width>
+                                           <height>350</height>
+                                          </size>
+                                         </property>
+                                         <property name="styleSheet">
+                                          <string notr="true"/>
+                                         </property>
+                                         <property name="frameShape">
+                                          <enum>QFrame::StyledPanel</enum>
+                                         </property>
+                                         <property name="frameShadow">
+                                          <enum>QFrame::Raised</enum>
+                                         </property>
+                                         <layout class="QGridLayout" name="gridLayout_6">
+                                          <property name="leftMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="topMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="rightMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
+                                          <property name="spacing">
+                                           <number>0</number>
+                                          </property>
+                                         </layout>
+                                        </widget>
+                                       </item>
                                       </layout>
                                      </widget>
                                     </item>

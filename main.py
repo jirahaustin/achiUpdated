@@ -4,10 +4,9 @@ import sqlite3
 import sys
 from gui import *
 from Custom_Widgets.Widgets import *
-from database.database import *
 from PySide2 import *
 from PySide2.QtGui import QPainter
-from PySide2.QtWidgets import (QMainWindow, QApplication)
+#from PySide2.QtWidgets import (QMainWindow, QApplication)
 from PySide2.QtCharts import QtCharts
 
 data = ["headache", "cold", "migrane", "vertigo"]
@@ -75,6 +74,11 @@ class MainWindow(QMainWindow):
         self.ui.recExitBtn1.clicked.connect(
             lambda: self.ui.recordsStackedWidget.setCurrentIndex(0))
 
+        self.ui.recAuthSubmitBtn.clicked.connect(
+            lambda: self.ui.recordsStackedWidget.setCurrentIndex(1))
+        self.ui.recExitBtn1.clicked.connect(
+            lambda: self.ui.recordsStackedWidget.setCurrentIndex(0))
+
         self.ui.sumAuthSubmitBtn.clicked.connect(
             lambda: self.ui.summaryStackedWidget.setCurrentIndex(1))
         self.ui.sumMainExitBtn.clicked.connect(
@@ -102,7 +106,9 @@ class MainWindow(QMainWindow):
         self.ui.recSearchTable.setColumnWidth(1, 100)
         self.ui.recSearchTable.setColumnWidth(1, 100)
         self.ui.recSearchTable.setColumnWidth(1, 100)
-
+        self.diseasesBigDonut()
+        self.diseasesMediumDonut()
+        self.diseasesSmallDonut()
         self.demographicPiechart()
         self.loadPatientsList()
         self.show()
@@ -307,15 +313,23 @@ class MainWindow(QMainWindow):
         for patient in patients:
             self.ui.recSearchTable.setItem(
                 row, 0, QTableWidgetItem(patient["fname"]))
+            row = row+1
+        row = 0
         for patient in patients:
             self.ui.recSearchTable.setItem(
                 row, 1, QTableWidgetItem(patient["lname"]))
+            row = row+1
+        row = 0
         for patient in patients:
             self.ui.recSearchTable.setItem(
                 row, 2, QTableWidgetItem(patient["mname"]))
+            row = row+1
+        row = 0
         for patient in patients:
             self.ui.recSearchTable.setItem(
                 row, 3, QTableWidgetItem(patient["bday"]))
+            row = row+1
+        row = 0
         for patient in patients:
             self.ui.recSearchTable.setItem(
                 row, 4, QTableWidgetItem(patient["last_consultation"]))
@@ -323,12 +337,16 @@ class MainWindow(QMainWindow):
 
         print(patients)
 
+    # defcheckBoxConsultation(self):
+
+    ###########################SUMMARY################################
+
     def demographicPiechart(self):
 
         self.series = QtCharts.QPieSeries()
         self.series.append("Children", 80)
         self.series.append("Youth", 70)
-        self.series.append("Adults", 50)
+        self.series.append("Adults", 100)
         self.series.append("Seniors", 40)
 
         # adding slice
@@ -336,33 +354,140 @@ class MainWindow(QMainWindow):
         self.slice = self.series.slices()[2]
         self.slice.setExploded(True)
         self.slice.setLabelVisible(True)
-        self.slice.setPen(QPen(Qt.darkGreen, 2))
-        self.slice.setBrush(Qt.green)
+        self.slice.setPen(QPen(Qt.blue, 2))
+        self.slice.setBrush(Qt.blue)
 
         self.chart = QtCharts.QChart()
+        self.chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.chart.setBackgroundRoundness(0)
         self.chart.legend().hide()
         self.chart.addSeries(self.series)
         self.chart.createDefaultAxes()
         self.chart.setAnimationOptions(QtCharts.QChart.SeriesAnimations)
-        self.chart.setTitle("Pie Chart Example")
+        # self.chart.setTitle("")
 
-        self.chart.legend().setVisible(True)
-        self.chart.legend().setAlignment(Qt.AlignBottom)
+        # self.chart.legend().setVisible(True)
+        # self.chart.legend().setAlignment(Qt.AlignRight)
 
         self.chartView = QtCharts.QChartView(self.chart)
         self.chartView.setRenderHint(QPainter.Antialiasing)
 
         self.chart.setAnimationOptions(QtCharts.QChart.AllAnimations)
 
-        self.chartView.chart().setTheme(QtCharts.QChart.ChartThemeDark)
+        self.chartView.chart().setTheme(QtCharts.QChart.ChartThemeLight)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.chartView.sizePolicy().hasHeightForWidth())
+        self.chartView.setSizePolicy(sizePolicy)
+        self.chartView.setMinimumSize(QSize(0, 200))
+        self.ui.demographicGraph_2.layout().addWidget(self.chartView)
+
+    def diseasesBigDonut(self):
+        self.series = QtCharts.QPieSeries()
+        self.series.setHoleSize(0.48)
+        self.series.append("", 2)
+        self.series.append("Headache", 98)
+        self.slice = QtCharts.QPieSlice()
+        self.slice = self.series.slices()[1]
+        self.slice.setExploded(False)
+        self.slice.setLabelVisible()
+
+        self.chart = QtCharts.QChart()
+        self.chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.chart.setBackgroundRoundness(0)
+        self.chart.legend().hide()
+        self.chart.addSeries(self.series)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.SeriesAnimations)
+        #self.chart.setTitle("DonutChart Example")
+        self.chart.setTheme(QtCharts.QChart.ChartThemeBlueCerulean)
+
+        self.chartView = QtCharts.QChartView(self.chart)
+        self.chartView.setRenderHint(QPainter.Antialiasing)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.AllAnimations)
+
+        self.chartView.chart().setTheme(QtCharts.QChart.ChartThemeLight)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
             self.chartView.sizePolicy().hasHeightForWidth())
         self.chartView.setSizePolicy(sizePolicy)
-        self.chartView.setMinimumSize(QSize(0, 300))
-        self.ui.sumMainGraph4Container.layout().addWidget(self.chartView)
+        self.chartView.setMinimumSize(QSize(0, 200))
+        self.ui.sumMainGraph1.layout().addWidget(self.chartView)
+
+    def diseasesMediumDonut(self):
+        self.series = QtCharts.QPieSeries()
+        self.series.setHoleSize(0.48)
+        self.series.append("Others", 43)
+        self.series.append("Flu", 57)
+        self.slice = QtCharts.QPieSlice()
+        self.slice = self.series.slices()[1]
+        self.slice.setExploded(False)
+        self.slice.setLabelVisible()
+
+        self.chart = QtCharts.QChart()
+        self.chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.chart.setBackgroundRoundness(0)
+        self.chart.legend().hide()
+        self.chart.addSeries(self.series)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.SeriesAnimations)
+        #self.chart.setTitle("DonutChart Example")
+        self.chart.setTheme(QtCharts.QChart.ChartThemeBlueCerulean)
+
+        self.chartView = QtCharts.QChartView(self.chart)
+        self.chartView.setRenderHint(QPainter.Antialiasing)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.AllAnimations)
+
+        self.chartView.chart().setTheme(QtCharts.QChart.ChartThemeLight)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.chartView.sizePolicy().hasHeightForWidth())
+        self.chartView.setSizePolicy(sizePolicy)
+        self.chartView.setMinimumSize(QSize(0, 100))
+        self.ui.sumMainGraph3.layout().addWidget(self.chartView)
+
+    def diseasesSmallDonut(self):
+        self.series = QtCharts.QPieSeries()
+        self.series.setHoleSize(0.48)
+        self.series.append("Others", 72)
+        self.series.append("Diarrhea", 28)
+        self.slice = QtCharts.QPieSlice()
+        self.slice = self.series.slices()[1]
+        self.slice.setExploded(False)
+        self.slice.setLabelVisible()
+
+        self.chart = QtCharts.QChart()
+        self.chart.layout().setContentsMargins(0, 0, 0, 0)
+        self.chart.setBackgroundRoundness(0)
+        self.chart.legend().hide()
+        self.chart.addSeries(self.series)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.SeriesAnimations)
+        #self.chart.setTitle("DonutChart Example")
+        self.chart.setTheme(QtCharts.QChart.ChartThemeBlueCerulean)
+
+        self.chartView = QtCharts.QChartView(self.chart)
+        self.chartView.setRenderHint(QPainter.Antialiasing)
+
+        self.chart.setAnimationOptions(QtCharts.QChart.AllAnimations)
+
+        self.chartView.chart().setTheme(QtCharts.QChart.ChartThemeLight)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.chartView.sizePolicy().hasHeightForWidth())
+        self.chartView.setSizePolicy(sizePolicy)
+        self.chartView.setMinimumSize(QSize(0, 150))
+        self.ui.sumMainGraph2.layout().addWidget(self.chartView)
 
 
 if __name__ == "__main__":
