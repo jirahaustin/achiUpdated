@@ -1,0 +1,63 @@
+<RCC>
+  <qresource prefix="black">
+    <file>svg/search-black.svg</file>
+    <file>svg/search-gray.svg</file>
+    <file>svg/arrow-left-black.svg</file>
+    <file>svg/menu-black.svg</file>
+    <file>main_frame.ui</file>
+    <file>svg/chart-svgrepo-com.svg</file>
+    <file>svg/file-svgrepo-com.svg</file>
+    <file>svg/log-out-outlined-svgrepo-com.svg</file>
+    <file>svg/stethoscope-svgrepo-com.svg</file>
+  </qresource>
+  <qresource prefix="white">
+    <file>svg/log-out-outlined-svgrepo-com-white.svg</file>
+    <file>svg/chevron-right-white.svg</file>
+    <file>svg/menu-white.svg</file>
+    <file>svg/exit-white.svg</file>
+    <file>svg/chart-svgrepo-com-white.svg</file>
+    <file>svg/file-svgrepo-com-white.svg</file>
+    <file>svg/log-out-outlined-svgrepo-com-white.svg</file>
+    <file>svg/stethoscope-svgrepo-com-white.svg</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>images/FemaleAbdomen.png</file>
+    <file>images/FemaleArms.png</file>
+    <file>images/FemaleBack.png</file>
+    <file>images/FemaleBody.png</file>
+    <file>images/FemaleButtock.png</file>
+    <file>images/FemaleChest.png</file>
+    <file>images/FemaleHead.png</file>
+    <file>images/FemaleLegs.png</file>
+    <file>images/FemaleNeck.png</file>
+    <file>images/FemalePelvis.png</file>
+    <file>images/FemaleSkin.png</file>
+    <file>images/MaleAbdomen.png</file>
+    <file>images/MaleArms.png</file>
+    <file>images/MaleBack.png</file>
+    <file>images/MaleBody.png</file>
+    <file>images/MaleButtock.png</file>
+    <file>images/MaleChest.png</file>
+    <file>images/MaleHead.png</file>
+    <file>images/MaleLegs.png</file>
+    <file>images/MaleNeck.png</file>
+    <file>images/MalePelvis.png</file>
+    <file>images/MaleSkin.png</file>
+    <file>images/printselectedBtn.png</file>
+    <file>images/submitBtn.png</file>
+    <file>images/diagnosisPicture_1.png</file>
+    <file>images/recordsPicture.png</file>
+    <file>images/diagnosisPicture.png</file>
+  </qresource>
+  <qresource prefix="progressBarImages">
+    <file>images/graph1.png</file>
+    <file>images/graph2.png</file>
+    <file>images/graph3.png</file>
+    <file>images/graph4.png</file>
+    <file>images/progress1.png</file>
+    <file>images/progress2.png</file>
+    <file>images/progress3.png</file>
+    <file>images/progress4.png</file>
+    <file>images/progress5.png</file>
+  </qresource>
+</RCC>

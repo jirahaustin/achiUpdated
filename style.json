@@ -1,0 +1,63 @@
+{
+  "QCustomSlideMenu": [
+		{
+			"name": "leftMenuContainer",
+			"defaultSize": [{
+				"width": 0,
+				"height": "parent"
+			}],
+			"collapsedSize": [{
+				"width": 0,
+				"height": "parent"
+			}],
+			"expandedSize": [{
+				"width": 179,
+				"height": "parent"
+			}],
+			"toggleButton": [{
+				"buttonName": "menuBtn",
+				"icons": [{
+					"whenMenuIsCollapsed": ":/white/svg/menu-white.svg",
+					"whenMenuIsExpanded": ":/white/svg/menu-white.svg"
+				}]
+			}],
+			"menuTransitionAnimation": [{
+				"animationDuration": 500,
+				"animationEasingCurve": "Linear"
+			}]
+		}		
+	],
+	"QPushButtonGroup": [
+		{
+			"Buttons": [
+				"leftMenuDiagnosisBtn",
+				"leftMenuRecordsBtn",
+				"leftMenuSummaryBtn",
+				"leftMenuLogoutBtn"
+			],
+			"Style":[
+				{
+					"Active": "background-color: #1471C9;",
+					"NotActive": ""
+				}
+			]
+		}
+	],
+		"QCard": [{
+			"cards": [
+				"dCards1",
+				"dCards2",
+				"pBlueCard",
+				"pWhiteCard"
+			],
+			"shadow":[
+				{
+					"color": "000",
+					"blurRadius": 10,
+					"xOffset": 1,
+					"yOffset": 1
+				}
+			]
+		}]
+}
+
